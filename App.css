@@ -1,0 +1,86 @@
+/* Fondo kawaii con nubes y estrellitas */
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  /* Fondo lila pastel con nubes y estrellas */
+  background: linear-gradient(135deg, #d8b4e2, #c8a2c8);
+  overflow: hidden;
+}
+
+/* Estrellas */
+.app::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Nubes */
+.app::after {
+  content: "☁ ☁ ☁";
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 4rem;
+  opacity: 0.15;
+  animation: moveClouds 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100vw); }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #c8a2c8;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f0e5f5;
+}
+
+/* Modo oscuro */
+.app.dark {
+  background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
+}
+
+.app.dark button {
+  background-color: #555;
+  color: #fff;
+}
+
+.app.dark button:hover {
+  background-color: #777;
+}

@@ -1,0 +1,95 @@
+/* 🌸 Estilos generales */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-image: url("https://i.pinimg.com/originals/7f/4a/f0/7f4af0f0132e7e33e2281656ecacf2e0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 🌈 Contenedor principal */
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+/* ☀️ Modo claro */
+.app.light {
+  color: #5c4585;
+}
+
+/* 🌙 Modo oscuro */
+.app.dark {
+  background-color: rgba(46, 26, 71, 0.8);
+  color: #f8e3a1;
+}
+
+/* 🌸 Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+/* 💜 Botón para cambiar el tema */
+.theme-btn {
+  background-color: #f3d3ff;
+  color: #4b306a;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn:hover {
+  background-color: #e2b8ff;
+}
+
+/* 💫 Tarjetas */
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✨ Imagen de las tarjetas */
+.card-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+/* 🧁 Ajustes para modo oscuro */
+.app.dark .card {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8e3a1;
+}
+
+.app.dark .theme-btn {
+  background-color: #b88bdb;
+  color: #fff8dc;
+}
+
+.app.dark .theme-btn:hover {
+  background-color: #a373d6;
+}
